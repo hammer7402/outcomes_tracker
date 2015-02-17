@@ -3,31 +3,31 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'login#show'
+  root 'login#login'
 
   get '/' => 'login#login'
   get '/login' => 'login#login'
   post '/login' => 'login#select'
 
-  get '/admins' => 'admins#admin' # admins opt-in page for student search -or- admins listing
-  get '/admins/index' => 'admins#index'
-  destroy '/admins/index' => 'admins#destroy'
-  patch '/admins/index' => 'admins#update'
+  # get '/admins' => 'admins#admin' # admins opt-in page for student search -or- admins listing
+  # get '/admins/index' => 'admins#index'
+  # destroy '/admins/index' => 'admins#destroy'
+  # patch '/admins/index' => 'admins#update'
 
-  get '/admins/new' => 'admins#new'
-  post '/admins/new' => 'admins#create'
+  # get '/admins/new' => 'admins#new'
+  # post '/admins/new' => 'admins#create'
 
-  get '/admins/search' => 'admins#search'
-  get '/admins/search/cohorts' => 'cohorts#index'
-  get '/admins/search/cohorts/:cohort_id' => 'cohorts#show'
+  # get '/admins/search' => 'admins#search'
+  # get '/admins/search/cohorts' => 'cohorts#index'
+  # get '/admins/search/cohorts/:cohort_id' => 'cohorts#show'
 
-  get '/admins/cohorts/:cohort_id/:student_id' => 'students#show'
+  # get '/admins/cohorts/:cohort_id/:student_id' => 'students#show'
 
-  get '/students/new' => 'students#create'
-  get '/students/:student_id' => 'students#show'
-  get '/students/:student_id/update' => 'students#edit'
-  get '/students/:student_id/update' => 'students#update'
-  get '/students/:student_id/survey' => 'students#survey'
+  # get '/students/new' => 'students#create'
+  # get '/students/:student_id' => 'students#show'
+  # get '/students/:student_id/update' => 'students#edit'
+  # get '/students/:student_id/update' => 'students#update'
+  # get '/students/:student_id/survey' => 'students#survey'
 
 
 
