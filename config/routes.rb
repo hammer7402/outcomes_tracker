@@ -9,7 +9,14 @@ Rails.application.routes.draw do
   get '/login' => 'login#login'
   post '/login' => 'login#select'
 
-  get '/admins' => 'admins#admin' # admins opt-in page for student search -or- admins listing
+  get '/admins' => 'admins#admin'
+
+# admin#:location
+# admin#:class
+# admin#:cohort
+# admin#:student_id
+
+  # admins opt-in page for student search -or- admins listing
   # get '/admins/index' => 'admins#index'
   # destroy '/admins/index' => 'admins#destroy'
   # patch '/admins/index' => 'admins#update'
@@ -17,7 +24,8 @@ Rails.application.routes.draw do
   # get '/admins/new' => 'admins#new'
   # post '/admins/new' => 'admins#create'
 
-  # get '/admins/search' => 'admins#search'
+  get '/admins/search' => 'admins#search'
+  get '/admins/:locations' => 'admins#locations'
   # get '/admins/search/cohorts' => 'cohorts#index'
   # get '/admins/search/cohorts/:cohort_id' => 'cohorts#show'
 

@@ -3,7 +3,7 @@ class LoginController < ApplicationController
   end
 
   def select
-    admin = Admin.find_by({user_name: params[:user_name]})
+    admin = Admin.find_by({user_name: params[:user_name].downcase})
     student = Student.find_by({user_name: params[:user_name]})
     # binding.pry
 
