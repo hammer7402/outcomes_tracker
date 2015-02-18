@@ -1,8 +1,11 @@
 <div class='student'>
-  <p>Username: <%= @student.user_name %></p>
-  <p>Password: <%#= @student.l_name %></p>
-  <p>Student ID: <%= @student.id %></p>
-  <p>Course: <select>
+  <p>Username: </br><%= @student.user_name %></p>
+
+  <!-- <p>Password: <%#= @student.l_name %></p> -->
+
+  <p>Student ID: </br><%= @student.id %></p>
+
+  <p>Course: </br><select>
     <option value='WDI'>WDI</option>
     <option value='UXDI'>UXDI</option>
     <option value='PMI'>PMI</option>
@@ -16,7 +19,25 @@
     <option value='PMI'>PMI</option>
   </select></p> -->
 
+  <p>Employment Status:</br>
+    <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
+    <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
+  </p>
 
+  <p>Skills:</br>
+    <input type='text area' />
+  </p>
 
+  <p>Email:</br>
+    <input type='text' />
+  </p>
+
+  <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
+    <input type='text' />
+  </p>
+
+  <p></p>
+
+  <input type='submit' value='Update Account'/>
 
 </div>
