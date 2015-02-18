@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217212128) do
+ActiveRecord::Schema.define(version: 20150218155909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,27 @@ ActiveRecord::Schema.define(version: 20150217212128) do
   create_table "admins", force: :cascade do |t|
     t.string "user_name",       null: false
     t.string "password_digest", null: false
+  end
+
+  create_table "cohorts", force: :cascade do |t|
+    t.string  "cohort",    null: false
+    t.integer "course_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "course", null: false
+  end
+
+  create_table "courses_locations", id: false, force: :cascade do |t|
+    t.integer "course_id"
+    t.integer "location_id"
+  end
+
+  add_index "courses_locations", ["course_id"], name: "index_courses_locations_on_course_id", using: :btree
+  add_index "courses_locations", ["location_id"], name: "index_courses_locations_on_location_id", using: :btree
+
+  create_table "locations", force: :cascade do |t|
+    t.string "city", null: false
   end
 
   create_table "students", force: :cascade do |t|
