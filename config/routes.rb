@@ -25,7 +25,14 @@ Rails.application.routes.draw do
   # post '/admins/new' => 'admins#create'
 
   get '/admins/search' => 'admins#search'
-  get '/admins/:locations' => 'admins#locations'
+  # index of locations
+  get '/admins/locations' => 'admins#locations'
+  # show of a location
+  get '/admins/:location' => 'admins#location'
+
+
+
+
   # get '/admins/search/cohorts' => 'cohorts#index'
   # get '/admins/search/cohorts/:cohort_id' => 'cohorts#show'
 
