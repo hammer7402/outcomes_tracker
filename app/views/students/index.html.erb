@@ -1,0 +1,7 @@
+<h1>Student Directory</h1>
+
+<div class='students'>
+  <% @students.each do |student| %>
+    <%= link_to(student.user_name, student_path(student)) %>
+  <% end %>
+</div>
