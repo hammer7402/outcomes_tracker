@@ -23,10 +23,14 @@ Rails.application.routes.draw do
 
   # get '/admins/cohorts/:cohort_id/:student_id' => 'students#show'
 
+  get '/students' => 'students#index'
   # get '/students/new' => 'students#create'
   get '/students/:student_id' => 'students#show'
   get '/students/:student_id/edit' => 'students#edit'
-  # get '/students/:student_id/survey' => 'students#survey'
+  post '/students/:student_id' => 'students#show'
+  get '/students/:student_id/survey' => 'students#survey'
+
+  resources :students
 
 
 

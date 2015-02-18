@@ -1,3 +1,5 @@
+require 'httparty'
+
 class AdminsController < ApplicationController
   def admin
 
