@@ -1,0 +1,11 @@
+<div class='student'>
+  <h2>Edit Student Information</h2>
+
+  <%= form_for(@student) do |s|%>
+    <%= s.label(:user_name, "Username:") %>
+    <%= s.text_field(:user_name) %>
+    <%= s.label(:password, "Password:") %>
+    <%= s.text_field(:password) %>
+    <%= s.submit("Update Information") %>
+  <% end %>
+</div>

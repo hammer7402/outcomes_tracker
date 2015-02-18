@@ -25,8 +25,7 @@ Rails.application.routes.draw do
 
   # get '/students/new' => 'students#create'
   get '/students/:student_id' => 'students#show'
-  # get '/students/:student_id/update' => 'students#edit'
-  # get '/students/:student_id/update' => 'students#update'
+  get '/students/:student_id/edit' => 'students#edit'
   # get '/students/:student_id/survey' => 'students#survey'
 
 
