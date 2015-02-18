@@ -32,12 +32,28 @@ course = Course.create([
   { course: "UXDI" }
   ])
 
-courses_locations = CoursesLocation.create([
-  {course_id: 1, location_id: 1},
-  {course_id: 2, location_id: 1},
-  {course_id: 3, location_id: 1},
-  {course_id: 1, location_id: 2},
-])
+# INSERT INTO courses_locations
+#   (course_id, location_id)
+# VALUES
+#   (1, 1),
+#   (2, 1),
+#   (3, 1),
+#   (1, 2);
+c1 = Course.first
+c2 = Course.find(2)
+c3 = Course.find(3)
+
+# c1.locations << l1 << l2
+Location.first.courses << c1 << c2 << c3
+Location.find(2).courses << c1
+
+
+# courses_locations = CoursesLocation.create([
+#   {course_id: 1, location_id: 1},
+#   {course_id: 2, location_id: 1},
+#   {course_id: 3, location_id: 1},
+#   {course_id: 1, location_id: 2},
+# ])
 
 cohort = Cohort.create([
   { cohort: "Godot", course_id: 1},
