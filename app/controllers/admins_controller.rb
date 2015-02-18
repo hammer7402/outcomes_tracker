@@ -10,6 +10,11 @@ class AdminsController < ApplicationController
   end
 
   def locations
+    @locations = Location.all
+  end
+
+  def location
+    @location = Location.find(params[:id])
   end
 
 end
