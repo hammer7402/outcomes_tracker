@@ -44,11 +44,15 @@ ActiveRecord::Schema.define(version: 20150218155909) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string  "first",           null: false
-    t.string  "last",            null: false
-    t.string  "email",           null: false
-    t.string  "phone",           null: false
-    t.string  "password_digest", null: false
+    t.string  "first",                                 null: false
+    t.string  "last",                                  null: false
+    t.string  "email",                                 null: false
+    t.string  "phone",                                 null: false
+    t.string  "password_digest",                       null: false
+    t.boolean "is_employed",           default: false
+    t.text    "skills"
+    t.string  "employment_type"
+    t.date    "employment_start_date"
     t.integer "cohort_id"
   end
 

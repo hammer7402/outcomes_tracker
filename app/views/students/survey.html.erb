@@ -2,15 +2,16 @@
   <h2>Survey for <%= @student.first %></h2>
     <%= form_for(@student) do |s| %>
       <p>Are you currently working?
-        <%= s.label :is_employed, "is_employed" %>
-        <%= s.radio_button :is_employed, 1 %>(1)
-        <%= s.radio_button :is_employed, 2, checked: false %>(2)</p>
+        <%= s.label :is_employed %>
+        <%= s.radio_button :is_employed, 1 %>(Yes)
+        <%= s.radio_button :is_employed, 2, checked: true %>(No)</p>
 
       <p>If yes, when was your start date?<input type='date'></p>
 
       <p>Type of Employment:<input type='text'></p>
 
       <p>Thank you for completing General Assembly's 100 Day Survey!</p>
+      <p><%= s.submit("Update Information") %><p>
     <% end %>
 <div>
 
