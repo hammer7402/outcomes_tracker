@@ -10,7 +10,8 @@ class LoginController < ApplicationController
     if admin && admin.authenticate(params[:password])
       # store their id in session
       session[:admin_id] = admin.id
-      redirect_to admin_search_path
+      # redirect_to admin_search_path
+      redirect_to "/admin/search"
     elsif student && student.authenticate(params[:password])
       # binding.pry
       # store their id in session
