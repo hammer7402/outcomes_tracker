@@ -2,39 +2,25 @@
   Logged in as <%= @student.first %></br>
   <%= link_to 'logout', '/logout', method: :delete %>
 
-
-    <p>Username: </br><%= @student.first %></p>
+    <p>Username: <%= @student.first %></p>
 
     <p>Password: <%= @student.last %></p>
 
-    <p>Student ID: </br><%= @student.id %></p>
+<!--     <p>Student ID: </br><%= @student.id %></p> -->
 
-<!--     <p>Course: </br><select>
-      <option value='WDI'>WDI</option>
-      <option value='UXDI'>UXDI</option>
-      <option value='PMI'>PMI</option>
-      <option value='FEWD'>FEWD</option>
-      <option value='DS'>DS</option>
-    </select></p> -->
+    <p>Course: <%=  %></p>
+    <!-- insert course name based on cohort id, etc -->
 
-    <!-- <p>Cohort: <select>
-      <option value='WDI'>WDI</option>
-      <option value='UXDI'>UXDI</option>
-      <option value='PMI'>PMI</option>
-    </select></p> -->
+    <p>Cohort: <%= @student.cohort_id %></p>
+    <!-- change this to the cohort name -->
 
-    <p>Employment Status:</br>
-      <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
-      <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
-    </p>
+    <p>Employment Status: <%= @student.is_employed %></p>
+    <!-- make this a method that if is employed says yes or no -->
 
-    <p>Skills:</br>
-      <input type='text area' />
-    </p>
+    <p>Skills: <%= @student.skills %></p>
+    <!-- how will this be formatted? -->
 
-    <p>Email:</br>
-      <input type='text' />
-    </p>
+    <p>Email: <%= @student.email %></p>
 
     <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
       <input type='text' />
