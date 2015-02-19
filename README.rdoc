@@ -1,4 +1,4 @@
-Welcome to GA Outcomes Tracker
+#Welcome to GA Outcomes Tracker
 
 
 Outcomes trackers is a rails app for tracking General Assembly Immersive Course students.
