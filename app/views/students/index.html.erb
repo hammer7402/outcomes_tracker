@@ -2,6 +2,6 @@
 
 <div class='students'>
   <% @students.each do |student| %>
-    <%= link_to(student.user_name, student_path(student)) %>
+    <%= link_to(student.first, student_path(student)) %>
   <% end %>
 </div>

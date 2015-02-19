@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150218155909) do
 
   create_table "cohorts", force: :cascade do |t|
     t.string  "cohort",    null: false
+    t.string  "ends_on",   null: false
     t.integer "course_id"
   end
 
@@ -43,8 +44,12 @@ ActiveRecord::Schema.define(version: 20150218155909) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "user_name",       null: false
-    t.string "password_digest", null: false
+    t.string  "first",           null: false
+    t.string  "last",            null: false
+    t.string  "email",           null: false
+    t.string  "phone",           null: false
+    t.string  "password_digest", null: false
+    t.integer "cohort_id"
   end
 
 end

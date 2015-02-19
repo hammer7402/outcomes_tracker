@@ -56,20 +56,22 @@ cohorts.each_with_index do |cohort, i|
   else
     course_id = 0
   end
-
+  # binding.pry
   squadron = Cohort.create([
     { cohort: name, ends_on: end_date, course_id: course_id},
     ])
 
-  url_students = "http://104.131.73.180/api/v1/cohorts/#{i}/students"
-  students = HTTParty.get(url)["students"]
+  url_students = "http://104.131.73.180/api/v1/cohorts/#{i+1}/students"
+  students = HTTParty.get(url_students)["students"]
   students.each do |student|
+
     first = student["data"]["first"]
     last = student["data"]["last"]
     email = student["contact"]["email"]
     phone = student["contact"]["phone"]
+  # binding.pry
     student = Student.create([
-      { first: first, last: last, email: email, phone: phone, password: last, password_confirmation: last }
+      { first: first.downcase, last: last, email: email, phone: phone, password: last, password_confirmation: last, cohort_id: i+1 }
     ])
   end
 end
@@ -83,12 +85,13 @@ end
 #   (2, 1),
 #   (3, 1),
 #   (1, 2);
-# c1 = Course.first
-# c2 = Course.find(2)
-# c3 = Course.find(3)
-
+c1 = Course.first
+c2 = Course.find(2)
+c3 = Course.find(3)
+c4 = Course.find(4)
+c5 = Course.find(5)
 # c1.locations << l1 << l2
-# Location.first.courses << c1 << c2 << c3
+Location.first.courses << c1 << c2 << c3 << c4 << c5
 # Location.find(2).courses << c1
 
 

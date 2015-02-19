@@ -29,24 +29,25 @@ class StudentsController < ApplicationController
 
   def edit
     # @student = Student.find(params[:user_name])
-    @student = Student.find_by(params[:id])
+    # binding.pry
+    @student = Student.find(params[:id])
   end
 
   def update
-    student = Student.find_by(params[:id])
+    student = Student.find(params[:id])
     student.update(student_params)
     redirect_to student
   end
 
   def student_params
-    params.require(:student).permit(:user_name, :password, :id)
+    params.require(:student).permit(:first, :password, :id)
   end
 
 # using API directly
-  def index
-  end
+  # def index
+  # end
 
-  def cohorts
-    @
-  end
+  # def cohorts
+  #   @
+  # end
 end

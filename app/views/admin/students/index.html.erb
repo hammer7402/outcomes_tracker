@@ -8,6 +8,13 @@ div class="students">
   <% end %>
 </div>
 
+<!-- alternate functional div #KA -->
+<div class='students'>
+  <% @students.each do |student| %>
+    <%= link_to(student.first, student_path(student)) %>
+  <% end %>
+</div>
+
 <!-- change to first and last name -->
 
 

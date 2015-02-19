@@ -4,7 +4,7 @@ class LoginController < ApplicationController
 
   def select
     admin = Admin.find_by({user_name: params[:user_name].downcase})
-    student = Student.find_by({user_name: params[:user_name]})
+    student = Student.find_by({first: params[:user_name].downcase})
     # binding.pry
 
     if admin && admin.authenticate(params[:password])
@@ -16,7 +16,7 @@ class LoginController < ApplicationController
       # store their id in session
       session[:student_id] = student.id
       redirect_to "/students/#{student.id}/edit"
-      # redirect_to edit_student_path
+      # redirect_to edit_student(student)
     else
       # rerender the form
       redirect_to login_path
