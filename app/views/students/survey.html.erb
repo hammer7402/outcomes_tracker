@@ -1,16 +1,18 @@
-<h2>Survey</h2>
+<div class='student'>
+  <h2>Survey</h2>
+    <%= form_for(@student) do |s| %>
+      <p>Are you currently working?
+      Yes or No - radio field - in table, default is false </p>
 
-Are you currently working?
-Yes or No - radio field - in table, default is false
+      <p>(if says yes, what if a message pops up saying "Congratulations! Now you are Alumni")</p>
 
-(if says yes, what if a message pops up saying "Congratulations! Now you are Alumni")
+      <p>If yes, when was your start date?
+      answer is a date field</p>
 
-If yes, when was your start date?
-answer is a date field
+      <p>Type of Employment:
+      Textfield</p>
 
-Type of Employment:
-Textfield
-
-Thank you for completing General Asembly's 100 Day Survey!
-
+      <p>Thank you for completing General Asembly's 100 Day Survey!</p>
+    <% end %>
+<div>
 
