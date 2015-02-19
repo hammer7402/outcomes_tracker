@@ -6,7 +6,7 @@ A student or Admin may login to the portal with a provided username and password
 
 
 ## Team:
-   Name: Aliya Scribner   | Github: https://github.com/Dev814
+   Name: Aliya Scribner   | Github: <a href="https://github.com/Dev814"/a>
    Name: Kamari Aykes     | Github: https://github.com/brainyandbrown
    Name: Melodie Melfa    | Github: https://github.com/melmalfa
    Name: Michael Campbell | Github: https://github.com/hammer7402
