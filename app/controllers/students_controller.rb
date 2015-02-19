@@ -43,6 +43,10 @@ class StudentsController < ApplicationController
   end
 
 # using API directly
-  # def index
-  # end
+  def index
+  end
+
+  def cohorts
+    @
+  end
 end

@@ -1,7 +1,10 @@
+Logged in as <%= current_user.user_name %>
+<%= link_to 'logout', '/logout', method: :delete %>
+
 <div class='student'>
   <p>Username: </br><%= @student.user_name %></p>
 
-  <!-- <p>Password: <%#= @student.l_name %></p> -->
+  <!-- <p>Password: <%#= @student.last %></p> -->
 
   <p>Student ID: </br><%= @student.id %></p>
 
