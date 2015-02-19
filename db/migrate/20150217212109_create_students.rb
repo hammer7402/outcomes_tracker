@@ -8,5 +8,8 @@ class CreateStudents < ActiveRecord::Migration
       t.string :password_digest,  null: false
       t.references :cohort
     end
+
+    add_column(:students, :is_employed, :boolean, :default =>
+false)
   end
 end

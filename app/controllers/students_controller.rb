@@ -28,8 +28,6 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    # @student = Student.find(params[:user_name])
-    # binding.pry
     @student = Student.find(params[:id])
   end
 
@@ -37,6 +35,12 @@ class StudentsController < ApplicationController
     student = Student.find(params[:id])
     student.update(student_params)
     redirect_to student
+  end
+
+  def survey
+    @student = Student.find_by(params[:id])
+    # student.update(student_params)
+    # redirect_to student
   end
 
   def student_params
