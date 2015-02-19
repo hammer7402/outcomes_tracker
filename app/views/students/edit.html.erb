@@ -7,6 +7,26 @@
     <p><%= s.label(:last, "Password:") %><p>
     <%= s.password_field(:last) %>
 
+        <p>Skills:</br>
+      <input type='text area' />
+    </p>
+
+    <p>Email:</br>
+      <input type='text' />
+    </p>
+
+    <p>Employment Status:</br>
+      <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
+      <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
+    </p>
+
+    <p>Course: </br><select>
+      <option value='WDI'>WDI</option>
+      <option value='UXDI'>UXDI</option>
+      <option value='PMI'>PMI</option>
+      <option value='FEWD'>FEWD</option>
+      <option value='DS'>DS</option>
+    </select></p>
 
 
     <p><%= s.submit("Update Information") %><p>

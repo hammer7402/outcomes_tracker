@@ -6,10 +6,13 @@ class CreateStudents < ActiveRecord::Migration
       t.string :email,  null: false
       t.string :phone,  null: false
       t.string :password_digest,  null: false
+      t.boolean :is_employed, :default => false
+      t.text :skills
+      t.string :employment_type
+      t.date :employment_start_date
       t.references :cohort
     end
 
-    add_column(:students, :is_employed, :boolean, :default =>
-false)
   end
+
 end
