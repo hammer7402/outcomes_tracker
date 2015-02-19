@@ -45,5 +45,6 @@ Rails.application.routes.draw do
     member do
       post :survey
     end
+
   end
 end
