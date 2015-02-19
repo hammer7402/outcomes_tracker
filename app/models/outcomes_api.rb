@@ -21,10 +21,5 @@ module OutcomesApi
     JSON.parse(response.body)
   end
 
-  def self.details(student_id)
-    # url = "http://104.131.73.180/api/v1/cohorts/#{cohort_id}/students/????"
-    response = HTTParty.get(url)
-    JSON.parse(response.body)
-  end
 # binding.pry
 end
