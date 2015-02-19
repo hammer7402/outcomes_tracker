@@ -1,46 +1,47 @@
-Logged in as <%= current_user.first %>
-<%= link_to 'logout', '/logout', method: :delete %>
-
 <div class='student'>
-  <p>Username: </br><%= @student.first %></p>
+  Logged in as <%= @student.first %></br>
+  <%= link_to 'logout', '/logout', method: :delete %>
 
-  <!-- <p>Password: <%#= @student.last %></p> -->
 
-  <p>Student ID: </br><%= @student.id %></p>
+    <p>Username: </br><%= @student.first %></p>
 
-  <p>Course: </br><select>
-    <option value='WDI'>WDI</option>
-    <option value='UXDI'>UXDI</option>
-    <option value='PMI'>PMI</option>
-    <option value='FEWD'>FEWD</option>
-    <option value='DS'>DS</option>
-  </select></p>
+    <!-- <p>Password: <%#= @student.last %></p> -->
 
-  <!-- <p>Cohort: <select>
-    <option value='WDI'>WDI</option>
-    <option value='UXDI'>UXDI</option>
-    <option value='PMI'>PMI</option>
-  </select></p> -->
+    <p>Student ID: </br><%= @student.id %></p>
 
-  <p>Employment Status:</br>
-    <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
-    <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
-  </p>
+    <p>Course: </br><select>
+      <option value='WDI'>WDI</option>
+      <option value='UXDI'>UXDI</option>
+      <option value='PMI'>PMI</option>
+      <option value='FEWD'>FEWD</option>
+      <option value='DS'>DS</option>
+    </select></p>
 
-  <p>Skills:</br>
-    <input type='text area' />
-  </p>
+    <!-- <p>Cohort: <select>
+      <option value='WDI'>WDI</option>
+      <option value='UXDI'>UXDI</option>
+      <option value='PMI'>PMI</option>
+    </select></p> -->
 
-  <p>Email:</br>
-    <input type='text' />
-  </p>
+    <p>Employment Status:</br>
+      <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
+      <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
+    </p>
 
-  <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
-    <input type='text' />
-  </p>
+    <p>Skills:</br>
+      <input type='text area' />
+    </p>
 
-  <p></p>
+    <p>Email:</br>
+      <input type='text' />
+    </p>
 
-  <input type='submit' value='Update Account'/>
+    <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
+      <input type='text' />
+    </p>
+
+    <p></p>
+
+    <input type='submit' value='Update Account'/>
 
 </div>

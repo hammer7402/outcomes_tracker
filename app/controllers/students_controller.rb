@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
 
   def show
     # @student = Student.find(params[:user_name])
-    @student = Student.find_by(params[:id])
+    @student = Student.find(params[:id])
   end
 
   def new
