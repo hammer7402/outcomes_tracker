@@ -1,0 +1,11 @@
+<h1>Locations</h1>
+
+<div class="locations">
+  <% @locations.each do |location| %>
+<a href="<%= admin_location_path(location) %>" alt=""><%= location.city %></a><br>
+
+
+  <% end %>
+</div>
+
+

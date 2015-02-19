@@ -1,0 +1,14 @@
+<h1>Courses</h1>
+
+<div class="courses">
+  <% @courses.each do |course| %>
+<a href="<%= admin_course_path(course) %>" alt=""><%= course.name %></a><br>
+
+
+  <% end %>
+</div>
+
+
+
+
+
