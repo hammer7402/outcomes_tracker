@@ -7,12 +7,13 @@
     <p>Password: <%= @student.last %></p>
 
 <!--     <p>Student ID: </br><%= @student.id %></p> -->
-
-    <p>Course: <%=  %></p>
+  <p>Attended the <%= @student.cohort %> <%= @student.cohort.course %> course in <%= @student.cohort.course.location %>.</p>
     <!-- insert course name based on cohort id, etc -->
+    <p>Graduated on <%= @student.cohort.course</p>
 
-    <p>Cohort: <%= @student.cohort_id %></p>
-    <!-- change this to the cohort name -->
+    s.cohort.course.locations.first.city
+
+
 
     <p>Employment Status: <%= @student.is_employed %></p>
     <!-- make this a method that if is employed says yes or no -->
