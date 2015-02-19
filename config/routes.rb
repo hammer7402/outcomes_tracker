@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get  '/login' => 'login#login'
   # called select because it selects if you are an admin or a student
   post '/login' => 'login#select'
-
 
   # admin pov!
   namespace :admin do
