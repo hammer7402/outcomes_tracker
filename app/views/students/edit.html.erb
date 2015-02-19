@@ -1,13 +1,11 @@
 <div class='student'>
-  <h2>Edit Student Information</h2>
+  <h2>Edit Student Information for <%= @student.user_name %> (Student ID #<%= @student.id %>)</h2>
 
   <%= form_for(@student) do |s| %>
-    <%= s.label(:user_name, "Username:") %>
+    <p><%= s.label(:user_name, "Username:") %><p>
     <%= s.text_field(:user_name) %>
-    <%= s.label(:password, "Password:") %>
-    <%= s.text_field(:password) %>
-    <%= s.label(:id, "Student ID:") %>
-    <%= s.text_field(:id) %>
-    <%= s.submit("Update Information") %>
+    <p><%= s.label(:password, "Password:") %><p>
+    <%= s.password_field(:password) %>
+    <p><%= s.submit("Update Information") %><p>
   <% end %>
 </div>
