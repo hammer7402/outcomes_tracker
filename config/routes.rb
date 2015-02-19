@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # admin pov!
   namespace :admin do
-    get '/search' => 'admin#index'
+    get '/search' => 'searches#search'
     # see students list and individual
     resources :students, only: [:index, :show]
     # see cohorts list and individual
