@@ -1,0 +1,13 @@
+<h1>Cohorts</h1>
+
+div class="cohorts">
+  <% @cohorts.each do |cohort| %>
+<a href="<%= admin_cohorts_path(cohort) %>" alt=""><%= cohort.name %></a><br>
+
+
+  <% end %>
+</div>
+
+
+
+

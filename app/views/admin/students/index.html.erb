@@ -1,1 +1,13 @@
 <h1>Admin Student Index Page</h1>
+
+div class="students">
+  <% @students.each do |student| %>
+<a href="<%= admin_students_path(student) %>" alt=""><%= student.username %></a><br>
+
+
+  <% end %>
+</div>
+
+<!-- change to first and last name -->
+
+
