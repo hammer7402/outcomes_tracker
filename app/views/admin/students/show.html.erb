@@ -1,5 +1,40 @@
-<h1>Student</h1>
+<h1>Admin: Student Page for <%= @student.first.capitalize %> <%= @student.last %></h1>
 
+
+<div class='student show'>
+
+    <p>Username: <%= @student.first.capitalize %></p>
+
+    <p>Password: <%= @student.last %></p>
+
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in
+   <!--     @student.cohort.course.location.city %>. -->
+   <!-- fix this - won't recognize location :(  ) -->
+    </p>
+    <p>Graduated on <%= @student.cohort.ends_on %>.</p>
+
+    <p>Employment Status:
+      <% if @student.is_employed == false %>
+          <%= "Not Yet Employed" %>
+      <% else %>
+        <%= "Employed" %>
+      <% end %>
+    </p>
+
+    <p>Skills: <ul class="skills">
+      <% @student.skills.split(",").each do |skill| %>
+                  <li><%= skill %></li>
+              <% end %>
+    </ul></p>
+
+    <p>Email: <%= @student.email %></p>
+
+    <p>Phone Number: <%= @student.phone %></p>
+
+    <%= link_to 'Update Account', edit_student_path(@student) %>
+
+
+</div>
 
 
 <%= button_to "All Students", admin_students_path, method: "get" %>
