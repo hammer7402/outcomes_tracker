@@ -3,6 +3,14 @@ class Student < ActiveRecord::Base
   belongs_to :cohort
   has_one :course, through: :cohort
 
+  def self.find_by_username(username)
+    all.select {|student| student.username == username}.first
+  end
+
+  def username
+    first.downcase
+  end
+
   def is_employed?
     # TODO: (PJ) should this key off of date or employment type?
     #       Right now it's date.
