@@ -7,19 +7,12 @@ class Cohort < ActiveRecord::Base
     (Date.today-ends_on.to_date).to_i
   end
 
+  # TODO: (PJ) should rename this students_employed_by_day(days)
   def student_count(days)
-    employed_count = 0
-    students.each do |student|
-      start_date = student.employment_start_date.to_date
-      if start_date || ((Date.today-start_date).to_i <= days)
-        if student.is_employed?
-          employed_count+=1
-        end
-      end
-    end
-    employed_count
+    students.select {|student| student.was_employed_after_day days}.length
   end
 
+  # TODO: (PJ) should rename this percent_students_employed_by_day(days)
   def percent_employed(days)
     students_len = students.length
     employed_count = 0

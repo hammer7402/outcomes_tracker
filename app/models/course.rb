@@ -4,16 +4,7 @@ class Course < ActiveRecord::Base
   has_many :students, through: :cohorts
 
   def student_count(days)
-    employed_count = 0
-    students.each do |student|
-      start_date = student.employment_start_date.to_date
-      if start_date || ((Date.today-start_date).to_i <= days)
-        if student.is_employed?
-          employed_count+=1
-        end
-      end
-    end
-    employed_count
+    students.select {|student| student.was_employed_after_day days}.length
   end
 
   def percent_employed(days)
