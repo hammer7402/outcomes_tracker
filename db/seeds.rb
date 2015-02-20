@@ -13,10 +13,10 @@ Course.destroy_all
 Location.destroy_all
 
 admin = Admin.create([
-  { user_name: "mike", password: "abcd", password_confirmation: "abcd"},
+  { user_name: "mike",    password: "abcd",    password_confirmation: "abcd"},
   { user_name: "melodie", password: "Melodie", password_confirmation: "Melodie"},
-  { user_name: "kamari", password: "Kamari", password_confirmation: "Kamari"},
-  { user_name: "aliya", password: "Aliya", password_confirmation: "Aliya"}
+  { user_name: "kamari",  password: "Kamari",  password_confirmation: "Kamari"},
+  { user_name: "aliya",   password: "Aliya",   password_confirmation: "Aliya"}
 ])
 
 location = Location.create([
@@ -32,11 +32,11 @@ course = Course.create([
   { course: "UXDI" },
   { course: "DS" },
   { course: "FEWD" }
-  ])
+])
 
-url = "http://104.131.73.180/api/v1/cohorts"
-cohorts = HTTParty.get(url)["cohorts"]
-length = cohorts.length
+url       = "http://104.131.73.180/api/v1/cohorts"
+cohorts   = HTTParty.get(url)["cohorts"]
+length    = cohorts.length
 course_id = 0
 
 cohorts.each_with_index do |cohort, i|

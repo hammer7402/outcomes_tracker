@@ -1,6 +1,8 @@
 <div class='student'>
   <h2>Survey for <%= @student.first %> <%= @student.last %></h2>
     <%= form_for(@student) do |s| %>
+      <%# FIXME: (PJ) removed is_employed from DB, use employment type or date %>
+    
       <p>Are you currently working?
         <%= s.label :is_employed %>
         <%= s.radio_button :is_employed, 1 %>(Yes)
