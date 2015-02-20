@@ -6,9 +6,7 @@
 
     <p>Password: <%= @student.last %></p>
 
-    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in
-   <!--     @student.cohort.course.location.city %>. -->
-   <!-- fix this - won't recognize location :(  ) -->
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <%= Location.find(@student).city %>
     </p>
     <p>Graduated on <%= @student.cohort.ends_on %>.</p>
 

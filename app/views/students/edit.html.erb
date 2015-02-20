@@ -2,42 +2,53 @@
   <h2>Edit Student Information</h2>
   <h2><%= @student.first.capitalize %> <%= @student.last %></h2>
 
-  <%= form_for(@student) do |s| %>
-    <p><%= s.label(:first, "Username:") %><p>
-    <%= s.text_field(:first) %>
-    <p><%= s.label(:last, "Password:") %><p>
-    <%= s.password_field(:last) %>
+  <p>Username: <%= @student.first.capitalize %></p>
 
-        <p>Skills: (Separate individual skills by comma)</br>
+  <p>Password: <%= @student.last %></p>
+
+  <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in
+   <!--     @student.cohort.course.location.city %>. -->
+   <!-- fix this - won't recognize location :(  ) -->
+    </p>
+  <p>Graduated on <%= @student.cohort.ends_on %>.</p>
+
+  <p>Employment Status: <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
+      <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
+    </p>
+
+    <p>Skills:
+    </p>
+
+    <p>Email: </p>
+
+    <p>Phone Number: </p>
+
+
+
+</div>
+
+    <p>Skills: (Separate individual skills by comma)</br>
       <input type='text area' />
     </p>
 
     <p>Email:</br>
       <input type='text' />
     </p>
-
-    <%# FIXME: (PJ) removed is_employed from DB, use employment type or date %>
-    <p>Employment Status:</br>
-      <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
-      <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
-    </p>
-
-    <p>Course: </br><select>
-      <option value='WDI'>WDI</option>
-      <option value='UXDI'>UXDI</option>
-      <option value='PMI'>PMI</option>
-      <option value='FEWD'>FEWD</option>
-      <option value='DS'>DS</option>
-    </select></p>
-
      <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
       <input type='text' />
     </p>
+
+    <%# FIXME: (PJ) removed is_employed from DB, use employment type or date %>
 
 
     <p><%= s.submit("Update Information") %><p>
   <% end %>
 
+  <%= form_for(@student) do |s| %>
+    <p><%= s.label(:first, "Username:") %><p>
+    <%= s.text_field(:first) %>
+    <p><%= s.label(:last, "Password:") %><p>
+    <%= s.password_field(:last) %>
 
 
 
