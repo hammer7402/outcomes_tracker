@@ -1,20 +1,17 @@
-<h1>Admin Student Index Page</h1>
+<div class="admin header">
+  <h1>Admin Student Index Page</h1>
+  <a href="<%= admin_search_path %>" alt="">Back to Admin Search Page</a>
+</div>
+<br>
 
-div class="students">
-  <% @students.each do |student| %>
-<a href="<%= admin_students_path(student) %>" alt=""><%= student.username %></a><br>
-
-
-  <% end %>
+<div class="studentIndex">
+    <% @students.each do |student| %>
+      <a href="<%= admin_student_path(student) %>" alt=""><%= student.first.capitalize %> <%= student.last %></a><br>
+    <% end %>
 </div>
 
-<!-- alternate functional div #KA -->
-<div class='students'>
-  <% @students.each do |student| %>
-    <%= link_to(student.first, student_path(student)) %>
-  <% end %>
-</div>
 
-<!-- change to first and last name -->
+
+
 
 

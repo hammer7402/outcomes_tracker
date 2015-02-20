@@ -1,8 +1,8 @@
-<div class='student'>
-  Logged in as <%= @student.first %></br>
-  <%= link_to 'logout', '/logout', method: :delete %>
+<div class='student show'>
 
-    <p>Username: <%= @student.first %></p>
+  <h2><%= @student.first.capitalize %> <%= @student.last %></h2>
+
+    <p>Username: <%= @student.first.capitalize %></p>
 
     <p>Password: <%= @student.last %></p>
 
@@ -28,12 +28,9 @@
 
     <p>Email: <%= @student.email %></p>
 
-    <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
-      <input type='text' />
-    </p>
+    <p>Phone Number: <%= @student.phone %></p>
 
-    <p></p>
+    <%= link_to 'Update Account', edit_student_path(@student) %>
 
-    <input type='submit' value='Update Account'/>
 
 </div>
