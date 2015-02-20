@@ -11,6 +11,16 @@ class Student < ActiveRecord::Base
     first.downcase
   end
 
+  def employ_as(type, date)
+    self.employment_type       = type
+    self.employment_start_date = date
+  end
+
+  def employ!(type, date)
+    employ_as type, date
+    save!
+  end
+
   def is_employed?
     # TODO: (PJ) should this key off of date or employment type?
     #       Right now it's date.
@@ -44,8 +54,8 @@ class Student < ActiveRecord::Base
 
   def was_employed_after_day(days)
     if self.is_employed?
-      cohort_graduated_on = Date.parse self.cohort.ends_on
-      employed_on = self.employment_start_date
+      cohort_graduated_on = cohort.ends_on
+      employed_on         = employment_start_date
       (employed_on - cohort_graduated_on).to_i <= days
     end
   end
