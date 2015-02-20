@@ -31,6 +31,9 @@ Rails.application.routes.draw do
     resources :courses, only: [:index, :show] do
       # see cohorts BY course as a list
       # resources :cohorts, only: [:index]
+      member do
+        get :chart
+      end
     end
     resources :locations, only: [:index, :show] do
       # see cohorts BY location as a list

@@ -16,14 +16,14 @@ class Cohort < ActiveRecord::Base
     students_len = students.length
     employed_count = 0
 
-    employed_count = student_count(days)
+    employed_count = students_employed_by_day(days)
 
     percent = employed_count.to_f/students_len
     percent.round(2)*100
   end
 
   def percent_unemployed_by_day(days)
-    employed = percent_employed(days)
+    employed = percent_employed_by_day(days)
     100-employed
   end
 
