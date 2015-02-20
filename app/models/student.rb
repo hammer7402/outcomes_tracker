@@ -39,7 +39,7 @@ class Student < ActiveRecord::Base
   end
 
   def has_been_employed_90_days?
-    has_been_employed_days(30)
+    has_been_employed_days(90)
   end
 
   def was_employed_after_day(days)

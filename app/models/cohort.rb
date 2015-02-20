@@ -7,25 +7,24 @@ class Cohort < ActiveRecord::Base
     (Date.today-ends_on.to_date).to_i
   end
 
-  # TODO: (PJ) should rename this students_employed_by_day(days)
-  def student_count(days)
+  def students_employed_by_day(days)
     students.select {|student| student.was_employed_after_day days}.length
   end
 
-  # TODO: (PJ) should rename this percent_students_employed_by_day(days)
-  def percent_employed(days)
+
+  def percent_employed_by_day(days)
     students_len = students.length
     employed_count = 0
 
     employed_count = student_count(days)
 
     percent = employed_count.to_f/students_len
-    percent.round(2)
+    percent.round(2)*100
   end
 
-  def percent_unemployed(days)
+  def percent_unemployed_by_day(days)
     employed = percent_employed(days)
-    1-employed
+    100-employed
   end
 
 end
