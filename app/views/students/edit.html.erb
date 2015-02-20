@@ -1,5 +1,6 @@
-<div class='student'>
-  <h2>Edit Student Information for <%= @student.first %> (Student ID #<%= @student.id %>)</h2>
+<div class='student edit'>
+  <h2>Edit Student Information</h2>
+  <h2><%= @student.first.capitalize %> <%= @student.last %></h2>
 
   <%= form_for(@student) do |s| %>
     <p><%= s.label(:first, "Username:") %><p>
@@ -28,7 +29,15 @@
       <option value='DS'>DS</option>
     </select></p>
 
+     <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
+      <input type='text' />
+    </p>
+
 
     <p><%= s.submit("Update Information") %><p>
   <% end %>
+
+
+
+
 </div>

@@ -1,8 +1,14 @@
-<h1>Cohorts</h1>
+<div class="admin header">
+  <h1>Cohorts</h1>
+  <a href="<%= admin_search_path %>" alt="">Back to Admin Search Page</a>
+</div>
+<br>
 
-div class="cohorts">
+<div class="cohorts">
   <% @cohorts.each do |cohort| %>
-<a href="<%= admin_cohorts_path(cohort) %>" alt=""><%= cohort.name %></a><br>
+<a href="<%= admin_cohort_path(cohort) %>" alt=""><%= cohort.cohort %></a><br>
+
+
 
 
   <% end %>
