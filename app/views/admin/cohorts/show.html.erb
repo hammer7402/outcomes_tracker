@@ -1,7 +1,7 @@
 <h1>Cohort: <%= @cohort.cohort %></h1>
 
 
-
+<%= button_to "See Chart", "/admin/cohorts/#{@cohort.id}/chart", method: "get" %>
 
 
 <%= button_to "All Cohorts", admin_cohorts_path, method: "get" %>
