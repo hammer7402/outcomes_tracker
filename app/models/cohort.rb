@@ -12,7 +12,7 @@ class Cohort < ActiveRecord::Base
     students.each do |student|
       start_date = student.employment_start_date.to_date
       if start_date || ((Date.today-start_date).to_i <= days)
-        if student.is_employed
+        if student.is_employed?
           employed_count+=1
         end
       end

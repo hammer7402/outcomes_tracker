@@ -13,7 +13,7 @@
     <p>Graduated on <%= @student.cohort.ends_on %>.</p>
 
     <p>Employment Status:
-      <% if @student.is_employed == false %>
+      <% if @student.is_employed? == false %>
           <%= "Not Yet Employed" %>
       <% else %>
         <%= "Employed" %>
