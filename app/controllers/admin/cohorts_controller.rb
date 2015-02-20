@@ -1,4 +1,6 @@
 class Admin::CohortsController < ApplicationController
+  before_action :authenticate_admin
+
   def index
     @cohorts = Cohort.all
   end

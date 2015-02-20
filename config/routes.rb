@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # called select because it selects if you are an admin or a student
   post '/login' => 'login#select'
 
+  delete '/logout' => 'login#destroy'
+
   # admin pov!
   namespace :admin do
     get '/search' => 'searches#search'

@@ -1,7 +1,7 @@
 require 'httparty'
 
 class StudentsController < ApplicationController
-
+  before_action :authenticate_student
   # with using ActiveRecord
   def index
     @students = Student.all
