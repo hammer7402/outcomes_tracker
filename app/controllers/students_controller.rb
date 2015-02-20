@@ -50,14 +50,14 @@ class StudentsController < ApplicationController
     params.require(:student).permit(
       :first,
       :last,
+      :email,
+      :phone,
       :password, :password_confirmation,
       :id,
-      :employment_start_date,
       :skills,
       :employment_type,
-      :cohort_id,
-      :phone,
-      :email
+      :employment_start_date,
+      :cohort_id
       )
   end
 
