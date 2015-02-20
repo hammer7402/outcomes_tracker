@@ -1,7 +1,7 @@
 class Cohort < ActiveRecord::Base
   belongs_to :course
-  has_many :students
-  has_one :location, through: :course
+  has_many   :students
+  has_one    :location, through: :course
 
   def days_past_cohort
     (Date.today-ends_on.to_date).to_i
