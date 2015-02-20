@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150218155909) do
 
   create_table "cohorts", force: :cascade do |t|
     t.string  "cohort",    null: false
-    t.string  "ends_on",   null: false
+    t.date    "ends_on",   null: false
     t.integer "course_id"
   end
 
