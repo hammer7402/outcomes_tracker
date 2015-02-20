@@ -6,7 +6,8 @@ class Course < ActiveRecord::Base
   def student_count(days)
     employed_count = 0
     students.each do |student|
-      if (Date.today-student.employment_start_date.to_date).to_i <= days
+      start_date = student.employment_start_date.to_date
+      if start_date || ((Date.today-start_date).to_i <= days))
         if student.is_employed
           employed_count+=1
         end
