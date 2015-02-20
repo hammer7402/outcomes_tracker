@@ -18,6 +18,14 @@
       <% end %>
     </p>
 
+    <p>Employment Type:
+      <% if @student.is_employed? == false %>
+          <%= "Not Applicable" %>
+      <% else %>
+        <%= @student.employment_type %>
+      <% end %>
+    </p>
+
     <p>Skills: <ul class="skills">
       <% @student.skills.split(",").each do |skill| %>
                   <li><%= skill %></li>
