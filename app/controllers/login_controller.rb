@@ -23,4 +23,10 @@ class LoginController < ApplicationController
       redirect_to login_path
     end
   end
+
+  def destroy
+    # remove the user_id from session
+    session[:admin_id] = session[:student_id] = nil
+    redirect_to '/login'
+  end
 end

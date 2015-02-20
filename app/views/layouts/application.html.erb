@@ -9,6 +9,9 @@
 <body>
   <div class="header">General Assembly Outcomes Tracker
   </div>
+
+  <div class="logout"><%= link_to 'logout', logout_path, method: :delete %></div>
+
   <div class="main">
 
   <%= yield %>
