@@ -50,5 +50,13 @@ Rails.application.routes.draw do
       post :survey
     end
 
+    collection do
+      get :edit
+    end
+
+    member do
+      post :edit
+    end
+
   end
 end

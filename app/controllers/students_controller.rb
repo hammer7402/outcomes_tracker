@@ -46,18 +46,20 @@ class StudentsController < ApplicationController
     # redirect_to student
   end
 
+  private
+
   def student_params
-    params.require(:student).permit(
+    student_params.require(:student).permit(
+      :id,
       :first,
       :last,
       :email,
       :phone,
-      :password, :password_confirmation,
-      :id,
-      :skills,
-      :employment_type,
-      :employment_start_date,
-      :cohort_id
+      # :password_confirmation,
+      # :skills,
+      # :employment_type,
+      # :employment_start_date,
+      # :cohort_id
       )
   end
 
