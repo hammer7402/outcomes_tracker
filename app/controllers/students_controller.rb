@@ -16,6 +16,7 @@ class StudentsController < ApplicationController
     @student = Student.new
   end
 
+
   def create
     student = Student.create(student_params)
     student.save
@@ -28,7 +29,9 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @student = Student.find(params[:id])
+    student = Student.find(params[:id])
+    student.edit(student_params)
+    redirect_to student
   end
 
   def update
@@ -44,8 +47,21 @@ class StudentsController < ApplicationController
   end
 
   def student_params
-    params.require(:student).permit(:first, :password, :id)
+    params.require(:student).permit(
+      :first,
+      :last,
+      :password, :password_confirmation,
+      :id,
+      :is_employed,
+      :employment_start_date,
+      :skills,
+      :employment_type,
+      :cohort_id,
+      :phone,
+      :email
+      )
   end
+
 
 # using API directly
   # def index

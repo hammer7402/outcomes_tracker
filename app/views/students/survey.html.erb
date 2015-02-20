@@ -1,5 +1,5 @@
 <div class='student'>
-  <h2>Survey for <%= @student.first %></h2>
+  <h2>Survey for <%= @student.first %> <%= @student.last %></h2>
     <%= form_for(@student) do |s| %>
       <p>Are you currently working?
         <%= s.label :is_employed %>
