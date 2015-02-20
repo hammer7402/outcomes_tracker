@@ -5,51 +5,35 @@
   <p>Username: <%= @student.first.capitalize %></p>
 
   <p>Password: <%= @student.last %></p>
+  <!-- how do we have them edit the password? -->
 
-  <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in
-   <!--     @student.cohort.course.location.city %>. -->
-   <!-- fix this - won't recognize location :(  ) -->
+ <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <%= Location.find(@student).city %>
     </p>
+
   <p>Graduated on <%= @student.cohort.ends_on %>.</p>
 
   <p>Employment Status: <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
       <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
     </p>
+    <!-- does this work and does this data need to go anywhere? -->
 
-    <p>Skills:
+    <p>Employment Type:
     </p>
+    <!-- add input field -->
 
-    <p>Email: </p>
+    <p>Skills(Separate individual skills by comma): <input type='text' />
+    </p>
+    <!-- finish input field and change to text field -->
 
-    <p>Phone Number: </p>
+    <p>Email: <input type='text' /></p>
+    <!-- finish input field -->
 
+    <p>Phone Number: <input type='text' /></p>
+    <!-- finish input field and change to just be for hone number format -->
 
+<!--     <%#= button_to "Submit Changes",    %> -->
+    <!-- finish path and make sure it posts to database -->
 
 </div>
 
-    <p>Skills: (Separate individual skills by comma)</br>
-      <input type='text area' />
-    </p>
 
-    <p>Email:</br>
-      <input type='text' />
-    </p>
-     <p>Phone Number <em>(XXX) XXX-XXXX</em></br>
-      <input type='text' />
-    </p>
-
-    <%# FIXME: (PJ) removed is_employed from DB, use employment type or date %>
-
-
-    <p><%= s.submit("Update Information") %><p>
-  <% end %>
-
-  <%= form_for(@student) do |s| %>
-    <p><%= s.label(:first, "Username:") %><p>
-    <%= s.text_field(:first) %>
-    <p><%= s.label(:last, "Password:") %><p>
-    <%= s.password_field(:last) %>
-
-
-
-</div>
