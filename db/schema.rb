@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150220165507) do
   end
 
   create_table "students", force: :cascade do |t|
+<<<<<<< HEAD
     t.string  "first",                                 null: false
     t.string  "last",                                  null: false
     t.string  "email",                                 null: false
@@ -52,6 +53,15 @@ ActiveRecord::Schema.define(version: 20150220165507) do
     t.boolean "is_employed",           default: false
     t.text    "skills"
     t.string  "employment_type"
+=======
+    t.string  "first",                                         null: false
+    t.string  "last",                                          null: false
+    t.string  "email",                                         null: false
+    t.string  "phone",                                         null: false
+    t.string  "password_digest",                               null: false
+    t.text    "skills",                default: "none listed"
+    t.string  "employment_type",       default: "unemployed"
+>>>>>>> b5bee085e651b2cfc9a40e91ce72531850c6cf41
     t.date    "employment_start_date"
     t.integer "cohort_id"
   end

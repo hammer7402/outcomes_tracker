@@ -52,7 +52,6 @@ class StudentsController < ApplicationController
       :last,
       :password, :password_confirmation,
       :id,
-      :is_employed,
       :employment_start_date,
       :skills,
       :employment_type,
