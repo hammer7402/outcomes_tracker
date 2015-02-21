@@ -1,14 +1,17 @@
 class Student < ActiveRecord::Base
   has_secure_password
+  
   belongs_to :cohort
   has_one :course, through: :cohort
+
+  validates_uniqueness_of :email
 
   def self.find_by_username(username)
     all.select {|student| student.username == username}.first
   end
 
   def username
-    first.downcase
+    email.downcase
   end
 
   def employ_as(type, date)
