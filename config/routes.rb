@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   end
 
   # student pov!
-  resources :students, only: [:show, :edit, :update] do
+  resources :students, only: [:show, :edit, :update, :survey] do
     # the survey form
     collection do
       get :survey
@@ -53,12 +53,20 @@ Rails.application.routes.draw do
       post :survey
     end
 
+    # collection do
+    #   get :edit
+    # end
+
+    # member do
+    #   post :edit
+    # end
+
     collection do
       get :edit
     end
 
     member do
-      post :edit
+      post :update
     end
 
   end
