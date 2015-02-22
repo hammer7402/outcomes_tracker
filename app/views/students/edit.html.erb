@@ -21,7 +21,7 @@
     </p>
     <!-- add input field -->
 
-    <p>Skills(Separate individual skills by comma): <input type='text' />
+    <p>Skills(Separate individual skills by comma): <input type='text area' />
     </p>
     <!-- finish input field and change to text field -->
 
@@ -31,7 +31,7 @@
     <p>Phone Number: <input type='text' /></p>
     <!-- finish input field and change to just be for hone number format -->
 
-<!--     <%#= button_to "Submit Changes",    %> -->
+  <%= button_to "Submit Changes", @student, method: "get"   %>
     <!-- finish path and make sure it posts to database -->
 
 </div>

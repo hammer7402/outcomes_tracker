@@ -1,7 +1,8 @@
 require 'httparty'
 
 class StudentsController < ApplicationController
-  before_action :authenticate_student
+  before_action :authenticate_student,
+  # :set_student, only: [:show, :edit, :update, :destroy, :survey]
   # with using ActiveRecord
   def index
     @students = Student.all
@@ -29,32 +30,34 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    student = Student.find(params[:id])
-    student.edit(student_params)
-    redirect_to student_path(student)
+    @student = Student.find(params[:id])
   end
 
   def update
     student = Student.find(params[:id])
     student.update(student_params)
-    redirect_to student_path(student)
+    redirect_to student
   end
 
   def survey
-    @student = Student.find_by(params[:id])
-    # @student.update(student_params)
-    # redirect_to student
+    student = Student.find_by(params[:id])
+    student.update(student_params)
+    redirect_to student_path(student)
   end
 
-  private
+  # private
+
+  def set_student
+    @student = Student.find(params[:id])
+  end
 
   def student_params
-    student_params.require(:student).permit(
+    params.require(:student).permit(
       :id,
-      :first,
-      :last,
-      :email,
-      :phone,
+      # :first,
+      # :last,
+      # :email,
+      # :phone,
       # :password_confirmation,
       # :skills,
       # :employment_type,
