@@ -1,3 +1,6 @@
+<% if @wrong === "true" %>
+  <p>Wrong user_name or password</p>
+<% end %>
 <%= form_tag("/login", method: "post") do %>
   <%= label_tag(:user_name, "Enter Username:") %>
   <%= text_field_tag(:user_name) %>
