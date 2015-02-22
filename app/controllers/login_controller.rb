@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
   def login
+    @wrong = params[:wrong]
   end
 
   def select
@@ -21,7 +22,8 @@ class LoginController < ApplicationController
       # redirect_to edit_student(student)
     else
       # rerender the form
-      redirect_to login_path
+      # redirect_to login_path
+      redirect_to "/login?wrong=true"
     end
   end
 

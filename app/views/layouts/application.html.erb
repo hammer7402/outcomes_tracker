@@ -10,7 +10,9 @@
   <div class="header">General Assembly Outcomes Tracker
   </div>
 
-  <div class="logout"><%= link_to 'logout', logout_path, method: :delete %></div>
+  <% if !session[:admin_id].nil? || !session[:student_id].nil? %>
+    <div class="logout"><%= link_to 'logout', logout_path, method: :delete %></div>
+  <% end %>
 
   <div class="main">
 
