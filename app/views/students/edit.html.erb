@@ -2,38 +2,55 @@
   <h2>Edit Student Information</h2>
   <h2><%= @student.first.capitalize %> <%= @student.last %></h2>
 
-  <p>Username: <%= @student.first.capitalize %></p>
+  <%= form_for(@student) do |s| %>
 
-  <p>Password: <%= @student.last %></p>
-  <!-- how do we have them edit the password? -->
-
- <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <%= Location.find(@student).city %>
+    <p>Username:
+      <%= s.text_field :email %>
     </p>
 
-  <p>Graduated on <%= @student.cohort.ends_on %>.</p>
-
-  <p>Employment Status: <input type='radio' id='student_is_employed_yes' name='student[is_employed]'value='Employed' checked='checked' />
-      <input type='radio' id='student_is_employed_no' name='student[is_employed]'value='Unemployed' />
+    <p>Password:
+      <%= s.password_field :password %>
     </p>
-    <!-- does this work and does this data need to go anywhere? -->
 
-    <p>Employment Type:
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <strong><%= Location.find(@student).city %></strong>
     </p>
-    <!-- add input field -->
 
-    <p>Skills(Separate individual skills by comma): <input type='text area' />
+    <p>Cohort ID: <%= @student.cohort_id %></p>
+
+    <p>Graduated on <%= @student.cohort.ends_on %></p>
+
+    <p>
+      <%= s.label :email, "Email:" %><br />
+      <%= s.email_field :email %>
     </p>
-    <!-- finish input field and change to text field -->
 
-    <p>Email: <input type='text' /></p>
-    <!-- finish input field -->
+    <p>Phone Number:
+      <%= s.telephone_field :phone %>
+    </p>
 
-    <p>Phone Number: <input type='text' /></p>
-    <!-- finish input field and change to just be for hone number format -->
+    <p>Employment Status:<br />
+      <%= s.radio_button :is_employed, 'true' %>
+      <%= s.label :is_employed, "Employed" %><br />
+      <%= s.radio_button :is_employed, 'false' %>
+      <%= s.label :is_employed, "Not Employed" %><br />
+    </p>
+      <!-- does this work and does this data need to go anywhere? -->
 
-  <%= button_to "Submit Changes", @student, method: "get"   %>
-    <!-- finish path and make sure it posts to database -->
+      <p><%= s.label :employment_type, "If employed, Employment Type:" %><br />
+        <%= s.text_field :employment_type %><br />
+      </p>
 
+      <p>
+        <%= s.label :employment_start_date, "Employment Start Date:" %>
+        <%= s.date_field :employment_start_date %>
+      </p>
+
+      <p>
+        <%= s.label :skills, "Skills:" %><br />
+        <%= s.text_area :skills %><br />
+      </p>
+
+    <%= s.submit "Submit Changes"%>
+  <% end %>
 </div>
-
 
