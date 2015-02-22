@@ -5,12 +5,13 @@
 
   <h2><%= @student.first.capitalize %> <%= @student.last %></h2>
 
-    <p>Username: <%= @student.first.capitalize %></p>
+    <p>Username: <%= @student.email %></p>
 
-    <p>Password: <%= @student.last %></p>
+    <p>Password: <%= @student.password %></p>
 
-    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <%= Location.find(@student).city %>
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course.
     </p>
+    <!--  in <#%= Location.find(@student.cohort.course).city %> - fix this association to be able to access the real Location -->
     <p>Graduated on <%= @student.cohort.ends_on %>.</p>
 
     <p>Employment Status:
