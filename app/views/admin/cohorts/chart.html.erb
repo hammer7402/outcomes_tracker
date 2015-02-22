@@ -13,7 +13,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.js"></script>
 <script>
 
-    var ctx = $("#myChart").get(0).getContext("2d");
+
   // This will get the first returned node in the jQuery collection.
     // var myNewChart = new Chart(ctx);
 
@@ -38,8 +38,9 @@
           }
       ]
     };
+    var ctx = $("#myChart").get(0).getContext("2d");
     var myBarChart = new Chart(ctx).Bar(data, {
-      multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
+      multiTooltipTemplate: "<%%= datasetLabel %> - <%%= value %>%"
     });
 
 </script>

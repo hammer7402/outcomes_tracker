@@ -4,9 +4,6 @@
 </div>
 <br>
 
-<p>blue = employed</p>
-<p>gray = employed</p>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.js"></script>
 
 <canvas id="myChart" width="400" height="400"></canvas>
@@ -15,7 +12,6 @@
 
     var ctx = $("#myChart").get(0).getContext("2d");
   // This will get the first returned node in the jQuery collection.
-    var myNewChart = new Chart(ctx);
 
     var data = {
       labels: ["30 days", "60 days", "90 days"],
@@ -39,7 +35,9 @@
       ]
     };
 
-    var myBarChart = new Chart(ctx).Bar(data);
+    var myBarChart = new Chart(ctx).Bar(data, {
+      multiTooltipTemplate: "<%%= datasetLabel %> - <%%= value %>%"
+    });
 </script>
 
 <%= button_to "All Courses", admin_courses_path, method: "get" %>
