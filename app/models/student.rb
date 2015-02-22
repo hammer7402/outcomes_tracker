@@ -1,8 +1,9 @@
 class Student < ActiveRecord::Base
   has_secure_password
-  
+
   belongs_to :cohort
   has_one :course, through: :cohort
+  has_one :city, through: :location
 
   validates_uniqueness_of :email
 

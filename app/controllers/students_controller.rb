@@ -30,7 +30,9 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @student = Student.find(params[:id])
+    @student = Student.find_by(params[:id])
+    # student.update(student_params)
+    # redirect_to student
   end
 
   def update
@@ -47,22 +49,15 @@ class StudentsController < ApplicationController
 
   # private
 
-  def set_student
-    @student = Student.find(params[:id])
-  end
-
   def student_params
     params.require(:student).permit(
-      :id,
-      # :first,
-      # :last,
-      # :email,
-      # :phone,
-      # :password_confirmation,
-      # :skills,
-      # :employment_type,
-      # :employment_start_date,
-      # :cohort_id
+      :email,
+      :phone,
+      :password_digest,
+      :is_employed,
+      :skills,
+      :employment_type,
+      :employment_start_date
       )
   end
 
