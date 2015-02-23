@@ -4,7 +4,7 @@
 
     <p>Username: <%= @student.email %></p>
 
-    <p>Password: <%= @student.last %></p>
+    <p>Password: <%= @student.password %></p>
 
     <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <strong><%= Location.find(@student.cohort.course).city %></strong>.
     </p>
