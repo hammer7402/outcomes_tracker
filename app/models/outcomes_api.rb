@@ -1,4 +1,3 @@
-require 'pry'
 require 'httparty'
 
 module OutcomesApi
@@ -21,5 +20,4 @@ module OutcomesApi
     JSON.parse(response.body)
   end
 
-# binding.pry
 end
