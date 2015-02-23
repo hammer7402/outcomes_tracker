@@ -11,18 +11,18 @@ A Student may update their information, including changing their employment stat
 
 
 ## Technologies used:
-   Ruby on Rails
-   Active Record
-   Postgresql
-   Javascript/jQuery
-   HTTParty
-   Chart.js
-   Bcrypt
-   API (General Assembly's)
-   Github
-   Heroku
-   CDN
-   Trello
+   Ruby on Rails,
+   Active Record,
+   Postgresql,
+   Javascript/jQuery,
+   HTTParty,
+   Chart.js,
+   Bcrypt,
+   API (General Assembly's),
+   Github,
+   Heroku,
+   CDN,
+   Trello.
 
 
 ## Trello board for KaMMA Chameleon:
