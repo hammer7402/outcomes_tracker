@@ -1,10 +1,12 @@
-<% if @wrong === "true" %>
-  <p>Wrong user_name or password</p>
-<% end %>
-<%= form_tag("/login", method: "post") do %>
-  <%= label_tag(:user_name, "Enter Username:") %>
-  <%= text_field_tag(:user_name) %>
-  <%= label_tag(:password, "Enter Password:") %>
-  <%= password_field_tag(:password) %>
-  <%= submit_tag("Login") %>
-<% end %>
+<div class='login'>
+  <% if @wrong === "true" %>
+    <p id='wrong'>Wrong Username or password</p>
+  <% end %>
+  <%= form_tag("/login", method: "post") do %>
+    <%= label_tag(:user_name, "Enter Username:") %>
+    <%= text_field_tag(:user_name) %>
+    <%= label_tag(:password, "Enter Password:") %>
+    <%= password_field_tag(:password) %>
+    <%= submit_tag("Login") %>
+  <% end %>
+</div>

@@ -1,3 +1,22 @@
+.login {
+
+}
+
 .student {
-  color: aaccbb;
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #000000;
+  background-color: #005ea7;
+  font-family: Times New Roman;
+  display: inline-block;
+  border-style: outset;
+  border-color: #bf7e00;
+  border-width: 5px;
+  text-align: justify;
+}
+
+#wrong {
+  color: #dc143c;
+  font-weight: bold;
 }
