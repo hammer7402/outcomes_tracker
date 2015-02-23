@@ -5,8 +5,6 @@ class LoginController < ApplicationController
 
   def select
     admin = Admin.find_by({user_name: params[:user_name].downcase})
-    # binding.pry
-    # student = Student.find_by_username(params[:user_name])
     student = Student.find_by({email: params[:user_name]})
 
     if admin && admin.authenticate(params[:password])
