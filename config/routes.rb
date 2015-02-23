@@ -42,24 +42,32 @@ Rails.application.routes.draw do
   end
 
   # student pov!
-  resources :students, only: [:show, :edit, :update, :survey] do
+  resources :students do
     # the survey form
-    collection do
+    # collection do
+    #   get :survey
+    # end
+
+    # where we post the form information
+    member do
       get :survey
     end
 
-    # where we post the form information
+    # collection do
+    #   get :survey
+    # end
+
     member do
       post :survey
     end
 
-    collection do
-      get :edit
-    end
+    # collection do
+    #   get :edit
+    # end
 
-    member do
-      post :edit
-    end
+    # member do
+    #   post :edit
+    # end
 
     collection do
       get :edit
