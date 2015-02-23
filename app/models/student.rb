@@ -3,7 +3,8 @@ class Student < ActiveRecord::Base
 
   belongs_to :cohort
   has_one :course, through: :cohort
-  belongs_to :location
+  # belongs_to :location
+  has_one :city, through: :cohort
 
   validates_uniqueness_of :email
 
