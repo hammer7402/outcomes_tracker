@@ -12,7 +12,7 @@
       <%= s.password_field :password %>
     </p>
 
-    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <strong><%= Location.find(@student).city %></strong>
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in  <!--  in <#%= Location.find(@student.cohort.course).city %> - fix this association to be able to access the real Location -->
     </p>
 
     <p>Cohort ID: <%= @student.cohort_id %></p>
