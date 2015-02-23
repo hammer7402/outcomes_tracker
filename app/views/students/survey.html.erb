@@ -1,16 +1,17 @@
 <div class='student'>
   <h2>Survey for <%= @student.first %> <%= @student.last %></h2>
+
     <%= form_for(@student) do |s| %>
       <%# FIXME: (PJ) removed is_employed from DB, use employment type or date %>
-    
+
       <p>Are you currently working?
         <%= s.label :is_employed %>
         <%= s.radio_button :is_employed, 1 %>(Yes)
         <%= s.radio_button :is_employed, 2, checked: true %>(No)</p>
 
-      <p>If yes, when was your start date?<input type='date'></p>
+      <p>If yes, when was your start date?<%= s.date_field :employment_start_date %></p>
 
-      <p>Type of Employment:<input type='text'></p>
+      <p>Type of Employment:<%= s.text_field :employment_type %></p>
 
       <p>Thank you for completing General Assembly's 100 Day Survey!</p>
       <p><%= s.submit("Update Information") %><p>

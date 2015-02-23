@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 
-$("radio").on("change", 'input[type="radio"]', function(){
+$(document).on("change", 'input[type="radio"]', function(){
     if($(this).val = "true") {
         alert("Congratulations! Now you are Alumni!");
-    } else {
-        alert("Please look out for communication from your Outcomes Coach.");
+    // } else {
+    //     alert("Please look out for communication from your Outcomes Coach.");
     }
 });
