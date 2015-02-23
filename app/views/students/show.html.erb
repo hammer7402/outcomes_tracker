@@ -6,9 +6,9 @@
 
     <p>Password: <%= @student.last %></p>
 
-    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course.
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <strong><%= Location.find(@student.cohort.course).city %></strong>.
     </p>
-       <!--  in <#%= Location.find(@student.cohort.course).city %> - fix this association to be able to access the real Location -->
+
     <p>Graduated on <%= @student.cohort.ends_on %>.</p>
 
     <p>Employment Status:

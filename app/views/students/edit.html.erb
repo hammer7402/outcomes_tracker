@@ -1,3 +1,4 @@
+include Location
 <div class='student edit'>
   <h2>Edit Student Information</h2>
   <h2><%= @student.first.capitalize %> <%= @student.last %></h2>
@@ -12,7 +13,7 @@
       <%= s.password_field :password %>
     </p>
 
-    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in  <!--  in <#%= Location.find(@student.cohort.course).city %> - fix this association to be able to access the real Location -->
+    <p>Attended the "<%= @student.cohort.cohort %>" <%= @student.cohort.course.course %> course in <strong><%= Location.find(@student.cohort.course).city %></strong>
     </p>
 
     <p>Cohort ID: <%= @student.cohort_id %></p>
