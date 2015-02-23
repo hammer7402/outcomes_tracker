@@ -1,11 +1,13 @@
-.login {
-
+.logout {
+  font-family: Impact;
+  text-align: right;
 }
 
 .student {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  left: 30%;
   color: #000000;
   background-color: #005ea7;
   font-family: Times New Roman;
@@ -19,4 +21,20 @@
 #wrong {
   color: #dc143c;
   font-weight: bold;
+}
+
+.header {
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+  font-family: Impact;
+  margin-right: auto;
+  margin-left: auto;
+  color: #c90303;
+  border-color: #000000;
+  font-size: 20px;
+}
+
+body {
+  background-color: #cccccc;
 }

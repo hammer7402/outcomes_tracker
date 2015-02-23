@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="header"><%= link_to "General Assembly Outcomes Tracker", root_path %>
+  <div class="header">
+<!--     <img src="ga_logo.png"></img> -->
+    <%= link_to "General Assembly Outcomes Tracker", root_path %>
   </div>
 
   <% if !session[:admin_id].nil? || !session[:student_id].nil? %>
