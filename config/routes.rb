@@ -44,38 +44,17 @@ Rails.application.routes.draw do
   # student pov!
   resources :students do
     # the survey form
-    # collection do
-    #   get :survey
-    # end
 
-    # where we post the form information
     member do
       get :survey
-    end
-
-    # collection do
-    #   get :survey
-    # end
-
-    member do
       post :survey
+      post :update
     end
-
-    # collection do
-    #   get :edit
-    # end
-
-    # member do
-    #   post :edit
-    # end
 
     collection do
       get :edit
     end
 
-    member do
-      post :update
-    end
 
   end
 end
