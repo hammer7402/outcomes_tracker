@@ -7,7 +7,11 @@
 <div class="studentIndex">
     <% @students.each do |student| %>
       <a href="<%= admin_student_path(student) %>" alt=""><%= student.first.capitalize %> <%= student.last %></a><br>
+      <% if @days_past_cohort == 100 %>
+        <%= student.submit "Send Survey" %>
+      <% end %>
     <% end %>
+
 </div>
 
 

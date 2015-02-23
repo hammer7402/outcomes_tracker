@@ -27,4 +27,11 @@ class Cohort < ActiveRecord::Base
     100-employed
   end
 
+  def send_email
+    if days_past_cohort == 100
+      Student.all.each do |student|
+        Pony.mail(:to => student.email, :from => 'iramak@icloud.com', :subject => 'hi', :body => "'It's been 100 days since your graduation from General Assembly! We would love to hear how you are doing. Please complete your personal survey here: 'students/#{student.id}/survey'." )
+      end
+    end
+  end
 end
