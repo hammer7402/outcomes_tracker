@@ -4,9 +4,11 @@ This Tracker comprises a group project as part of the Web Development Immersive 
 
 'GA Outcomes Tracker' is a Ruby on Rails app for tracking General Assembly Immersive Course students. Users - Admins and Students - may login to the portal with a provided username and password. A Student may update their information, including changing their employment status. An Admin may view outcomes information for individual students and collections of students based on cohort, course type, location or employment status.
 
-## Team KMM:
-   Name: Kamari Aykes     | Github: https://github.com/brainyandbrown
-   Name: Michael Campbell | Github: https://github.com/hammer7402
+## Team KMM:</br>
+   Name: Kamari Aykes     | Github: https://github.com/brainyandbrown</br>
+   
+   Name: Michael Campbell | Github: https://github.com/hammer7402</br>
+   
    Name: Melodie Malfa    | Github: https://github.com/melmalfa
 
 ##Try It Out!
