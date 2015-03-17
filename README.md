@@ -1,4 +1,4 @@
-# Welcome to Team KMM's Group Project:</br> 
+# Welcome to Team KMM's Group Project: 
 #<em>GA Outcomes Tracker</em>
 
 This Tracker comprises a group project as part of the Web Development Immersive course at General Assembly. Kamari, Michael and Melodie thrived as a team, hashing out details, managing time, pair-programming, and working remotely using github. The team collectively made decisions about the design, flow, structure and direction of the project, within the constraints of the assignment. Each team member contributed equally. This final project is the result of a 5-day sprint and is considered a work-in-progress.
