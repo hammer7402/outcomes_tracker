@@ -49,3 +49,5 @@ group :development, :test do
   gem 'pony', '~> 1.11'
 end
 
+gem 'ruby-graphviz'
+
