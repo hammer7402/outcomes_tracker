@@ -42,7 +42,7 @@ password: abcd
 
 <img src="erd.pdf" alt="Rendered PDF Document">
 
-![:image](erd.pdf)
+![:pdf](erd.pdf)
 
 ![:image](https://trello-attachments.s3.amazonaws.com/54e3bebd1e11112e6ec1d0b7/600x450/c7f4ad7748c5cf4e835cc8b4bcf6a8ee/Outcomes_Tracker_ERD.JPG.jpg)
 
