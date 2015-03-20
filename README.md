@@ -1,23 +1,16 @@
-# Welcome to Team KMM's Group Project: 
+# Welcome to Team KMM's Group Project:
 #<em>GA Outcomes Tracker</em>
 
 This Tracker comprises a group project as part of the Web Development Immersive course at General Assembly. Kamari, Michael and Melodie thrived as a team, hashing out details, managing time, pair-programming, and working remotely using github. The team collectively made decisions about the design, flow, structure and direction of the project, within the constraints of the assignment. Each team member contributed equally. This final project is the result of a 5-day sprint and is considered a work-in-progress.
 
 'GA Outcomes Tracker' is a Ruby on Rails app for tracking General Assembly Immersive Course students. Users - Admins and Students - may login to the portal with a provided username and password. A Student may update their information, including changing their employment status. An Admin may view outcomes information for individual students and collections of students based on cohort, course type, location or employment status.
 
-<<<<<<< HEAD
 ## Team KMM:</br>
-   <a href='https://github.com/brainyandbrown'>Kamari Aykes</a></br>
-   
-   <a href='https://github.com/hammer7402'>Michael Campbell</a></br>
-   
+   <a href='https://github.com/brainyandbrown'>Kamari Aykes</a>
+
+   <a href='https://github.com/hammer7402'>Michael Campbell</a>
+
    <a href='https://github.com/melmalfa'>Melodie Malfa</a>
-=======
-## Team KMM:
-Name: Kamari Aykes     | Github: https://github.com/brainyandbrown<br />
-Name: Michael Campbell | Github: https://github.com/hammer7402<br />
-Name: Melodie Malfa    | Github: https://github.com/melmalfa
->>>>>>> cf634114aaf61c087ae4ef6ce8b45b1810d09853
 
 ##Try It Out!
 
