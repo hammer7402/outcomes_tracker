@@ -31,20 +31,13 @@ password: abcd
    CDN,
    Trello.
 
+## ERD:
+
+![:image](erd.jpg)
 
 ## Wireframes:
 
 ![:image](https://trello-attachments.s3.amazonaws.com/54e3b231a592a0478f341cf0/2560x1920/ccc41b8060506697eec3f33e72f9eb54/20150217_143331.jpg)
-
-
-## ERDs:
-
-
-<img src="erd.pdf" alt="Rendered PDF Document">
-
-![:pdf](erd.pdf)
-
-![:image](https://trello-attachments.s3.amazonaws.com/54e3bebd1e11112e6ec1d0b7/600x450/c7f4ad7748c5cf4e835cc8b4bcf6a8ee/Outcomes_Tracker_ERD.JPG.jpg)
 
 
 ## Trello board for Team KMM (KaMMA Chameleon):
