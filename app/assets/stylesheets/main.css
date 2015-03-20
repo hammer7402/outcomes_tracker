@@ -31,8 +31,13 @@
   margin-right: auto;
   margin-left: auto;
   color: #c90303;
-  border-color: #000000;
-  font-size: 20px;
+  background-color: #000000;
+  font-size: 50px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
 }
 
 body {
