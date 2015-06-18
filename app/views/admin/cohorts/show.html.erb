@@ -3,5 +3,10 @@
 
 <%= button_to "See Chart", "/admin/cohorts/#{@cohort.id}/chart", method: "get" %>
 
+<%# binding.pry %>
+<%# if @days_past_cohort == 100 %>
+  <%#= student.submit "Send Survey" %>
+<%# end %>
+
 
 <%= button_to "All Cohorts", admin_cohorts_path, method: "get" %>
